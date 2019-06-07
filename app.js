@@ -5,18 +5,34 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const session = require("express-session");
+const MongoClient = require('mongodb').MongoClient;
 
 var indexRouter = require('./routes/index');
 
 var app = express();
-mongoose.connect('mongodb+srv://cluster0-g0tx9.mongodb.net/test--usernamesqr123',{ useNewUrlParser: true });
+
+const uri = "mongodb+srv://sqr123:sqr123@cluster0-g0tx9.mongodb.net/viand?retryWrites=true&w=majority'";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("viand").collection("hotels");
+//   console.log('connect')
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+mongoose.connect(uri, { useNewUrlParser: true }) 
+.then(() => console.log('connected to DataBase')) 
+.catch((err) => console.log(err));
+
+
+//mongoose.connect('mongodb+srv://sqr77:sqr77@cluster0-g0tx9.mongodb.net/viand?retryWrites=true&w=majority',{ useNewUrlParser: true });
 //mongoose.connect('mongodb://localhost/viand',{ useNewUrlParser: true });
-var db = mongoose.connection;
-//handle mongodb error
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log("Connected to DataBase...");
-});
+// var db = mongoose.connection;
+// //handle mongodb error
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', () => {
+//   console.log("Connected to DataBase...");
+// });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

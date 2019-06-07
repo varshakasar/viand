@@ -15,11 +15,13 @@
     "express-session": "^1.16.1",
     "http-errors": "~1.6.3",
     "https": "^1.0.0",
+    "mongodb": "^3.2.7",
     "mongoose": "^5.5.13",
     "morgan": "~1.9.1",
     "otplib": "^11.0.1",
     "password-hash": "^1.2.2",
     "pug": "2.0.0-beta11",
+    "request": "^2.88.0",
     "twilio": "^3.31.0",
     "urlencode": "^1.1.0"
   },
