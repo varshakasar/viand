@@ -9,8 +9,8 @@ const session = require("express-session");
 var indexRouter = require('./routes/index');
 
 var app = express();
-
-mongoose.connect('mongodb://localhost/viand',{ useNewUrlParser: true });
+mongoose.connect('mongodb+srv://cluster0-g0tx9.mongodb.net/test--usernamesqr123',{ useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost/viand',{ useNewUrlParser: true });
 var db = mongoose.connection;
 //handle mongodb error
 db.on('error', console.error.bind(console, 'connection error:'));

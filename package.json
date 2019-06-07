@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -15,7 +15,7 @@
     "express-session": "^1.16.1",
     "http-errors": "~1.6.3",
     "https": "^1.0.0",
-    "mongoose": "^5.5.11",
+    "mongoose": "^5.5.13",
     "morgan": "~1.9.1",
     "otplib": "^11.0.1",
     "password-hash": "^1.2.2",
