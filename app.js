@@ -11,7 +11,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-const uri = "mongodb+srv://sqr123:sqr123@cluster0-g0tx9.mongodb.net/viand?retryWrites=true&w=majority'";
+const uri = "mongodb+srv://sqr123:sqr123@cluster0-g0tx9.mongodb.net/viand?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true });
 // client.connect(err => {
 //   const collection = client.db("viand").collection("hotels");

@@ -269,19 +269,17 @@ module.exports = () => {
             if (!userExist) throw new Error('Invalid credentials.');
             else{
                 if(password === confirmpassword) {
-                    User.update({
+                    User.updateMany({
                         mobile:mobile
                     },
                     {
                         $set:{
                             password:hashedPassword
                         }
-                    },(err,resetPassword) => {
-                        if(err) throw new Error('Invalid credentials.');
-                        res.status(200).json({
+                    })
+                    res.status(200).json({
                             message: 'Password reset'
                         });
-                    })
             } else{
                 throw new Error('Password not match.')
             }
